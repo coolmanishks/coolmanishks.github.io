@@ -7,7 +7,7 @@ post_class: post-template
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
+        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}index.html">Home</a>
         <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
     </nav>
 </header>
@@ -62,28 +62,32 @@ post_class: post-template
 
         <footer class="post-footer">
             <!-- If we want to display author's name and bio -->
-            {% if site.author %}
                 <figure class="author-image">
                     <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
+                    <span class="hidden">Manish's Picture</span></a>
                 </figure>
                 <section class="author">
                     <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
+                    <h4> Manish Kumar Singh </h4>
                     <!-- Author Bio -->
                     <p>
-                        Here goes the author description. You might want to place some links too in here
+                        A machine learning enthusiast
                     </p>
                 </section>
-            {% endif %}
+        
 
             <!-- Share links section -->
             {% include share.html %}
 
             <!-- Disqus comments -->
-            {% if page.disqus %}
+            <!--{% if page.disqus %}
                 {% include disqus.html %}
-            {% endif %}
+            {% endif %}--->
+            
+            <!-- Post comments -->
+			<div class="notecomments">
+				{% include disqus.html %}	 
+			</div>
      
 
         </footer>
